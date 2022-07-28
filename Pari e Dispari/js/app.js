@@ -6,6 +6,7 @@
 // Dichiariamo chi ha vinto.
 
 const sceltaUser = prompt('Scegli "PARI" o "DISPARI",');
+console.log('sceltaUser')
 const numeroUser = parseInt(prompt('Scegli un numero da 1 a 5'));
 const numeroIA = Math.floor(Math.random() * 5 ) + 1;
 const somma = numeroUser + numeroIA
@@ -18,3 +19,8 @@ function checkPariDispari(somma) {
 		return false;
 }
 console.log(checkPariDispari(somma))
+if ((checkPariDispari(somma) == true && sceltaUser === 'PARI') || (checkPariDispari(somma) == false && sceltaUser === 'DISPARI') ){
+    console.log('Hai vinto!')
+} else {
+    console.log('Sei stato miserabilmente sconfitto.')
+}
